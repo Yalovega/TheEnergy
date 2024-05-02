@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.content {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 25px 0;
+  transition: all 0.4s ease;
+  /* background: rgba(1, 1, 1, 0.8); */
+}
+
+.navbar.sticky {
+  padding: 10px 0;
+  background: rgba(1, 1, 1, 0.9);
+}
+
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .menu-list {
+  display: flex;
+}
+
+.logotype {
+  width: 80%;
+}
+
+.navbar .logo a {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.menu-list li a,
+.navbar .logo a {
+  color: #fff;
+}
+
+.navbar .content .menu-list li a {
+  position: relative;
+  transition: 0.5s ease;
+}
+
+/* hovering menu items */
+.navbar .content .menu-list li a::before {
+  content: "";
+  position: absolute;
+  color: var(--Secondary, #F9995D) height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease;
+}
+
+.navbar .content .menu-list li a:hover {
+  color: var(--Secondary, #F9995D)
+}
+
+.navbar .content .menu-list li a:hover:before {
+  width: 100%;
+}
+
+.menu-list li a {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(img/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg  ) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about {
+  padding: 40px 0;
+}
+
+.content {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.content p {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 20px;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+/* cancel and menu btn */
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+/* media queries */
+@media (max-width: 886px) {
+  body .disabledScroll {
+    overflow: hidden;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+
+  .navbar .menu-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(1, 1, 1, 0.5);
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: 0.5s ease;
+  }
+
+  .navbar .menu-list.active {
+    left: 0;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+  }
+}
+
+
+
+.our-reputation {
+  color: var(--Neutral-800, #292E3D);
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.shadow-box-all {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 100px;
+
+}
+
+
+.shadow-box-1,
+.shadow-box-2,
+.shadow-box-3 {
+  display: flex;
+  width: 292px;
+  padding: 20px 20px 40px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  border-radius: 4px;
+  border: 1.4px solid var(--Neutral-100, #E0E3EB);
+  background: #FFF;
+  margin-right: 50px;
+}
+
+
+
+
+
+
+
+.text-h1 {
+  color: var(--Neutral-700, #3D445C);
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.icon-shadow {
+  width: 40px;
+  height: 40px;
+}
+
+.under-text {
+  color: var(--Neutral-400, #858EAD);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 254px;
+}
+
+.under-shadow {
+  margin-top: 158px;
+  margin-left: 114px;
+}
+
+.person-photo {
+  position: absolute;
+  width: 902px;
+  height: 669px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: url(<path-to-image>) lightgray -159.882px -67.003px / 127.181% 114.349% no-repeat;
+  box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.10), 0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+}
+
+.text-box {
+  border-radius: 2px;
+  background: var(--Primary, #2947A9);
+  box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.10), 0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+  width: 488px;
+  height: 523px;
+  flex-shrink: 0;
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 100px;
+}
+
+.text-in-box {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.text-box-h1 {
+  color: #FFF;
+  font-family: "Work Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.text-box-h2 {
+  color: #FFF;
+
+  /* Body/medium */
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 388px;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 2px solid var(--Primary, #2947A9);
+  background: var(--Neutral-White, #FFF);
+  margin-top: 40px;
+}
+
+.btn-text {
+  color: var(--Primary, #2947A9);
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background-color: #F9995D;
+  transition: 0.5s;
+}
